@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "protron", "protron.pyproj", "{F98A3E51-38E8-4AC9-B97F-9D52F65D84F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F98A3E51-38E8-4AC9-B97F-9D52F65D84F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98A3E51-38E8-4AC9-B97F-9D52F65D84F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98A3E51-38E8-4AC9-B97F-9D52F65D84F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98A3E51-38E8-4AC9-B97F-9D52F65D84F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C526E4B-DA57-44C8-9E31-19B700336AB3}
+	EndGlobalSection
+EndGlobal

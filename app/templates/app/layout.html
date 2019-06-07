@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><p>ПРОТРОН</p></li>
+            <li><p style="text-align: left;">Разработка и производство<br />силовой электроники</p></li>
+            <li class="item">Продукция</li>
+            <li class="item">Контакты</li>
+            <li class="item">Наши проекты</li>
+            <li class="item">О нас</li>
+        </ul>
+    </header>
+    <div class="body-content">
+{% block content %}{% endblock %}
+    </div>
+        <footer>
+            <content>
+                <p style="font-size: 36px;">г. Москва ул. Барклая д. 6 стр.5</p>
+                <p style="font-size: 30px; color: #66cccc;">+7(499)-550-30-25</p>
+                <p style="font-size: 24px; color: #999999;">© 2019 ПРОТРОН<br />Разработка и производство силовой электроники</p>
+                <p style="font-size: 14px; color: black;">Develop KomeR</p>
+            </content>
+        </footer>
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
