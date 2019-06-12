@@ -1,0 +1,173 @@
+/*.content {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}*/
+
+.content-item__1 {
+    height: calc(100vh - 60px);
+    -ms-grid-column: 1/4;
+    grid-column: 1/4;
+    -ms-grid-row: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-image: url("/media/fon-1.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+    .content-item__1 .block {
+        background-color: rgba(102, 153, 204, .85);
+        padding: 50px;
+        padding-bottom: 0px;
+        color: white;
+        -ms-grid-column: 2/6;
+        grid-column: 2/6;
+        -ms-grid-row: 2/5;
+        grid-row: 2/5;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: flex-end;
+    }
+
+        .content-item__1 .block > p {
+            font-size: 36px;
+            margin: 0px;
+            font-family: 'Century Gothic';
+        }
+
+        .content-item__1 .block a {
+            font-family: 'Century Gothic';
+            color: white;
+            font-size: 24px;
+            align-self: center;
+            justify-self: center;
+            border: 1px solid #66cccc;
+            padding: 10px;
+        }
+
+            .content-item__1 .block a:hover {
+                background-color: #6699cc;
+                border-color: white;
+                cursor: pointer;
+            }
+
+.content-item__2 {
+    -ms-grid-column: 1/4;
+    grid-column: 1/4;
+    -ms-grid-row: 2/3;
+    grid-row: 2/3;
+    box-shadow: 0px 0px 50px 140px white;
+    margin-bottom: 80px;
+}
+
+    .content-item__2 .block {
+        padding: 0px 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        font-family: Century;
+    }
+
+        .content-item__2 .block .item1 p {
+            font-size: 24px;
+        }
+
+        .content-item__2 .block .item1 .content > div {
+            margin: 10px;
+            min-height: 90px;
+        }
+
+        .content-item__2 .block .item1 .content object {
+            float: left;
+            margin: 0px 30px;
+        }
+
+        .content-item__2 .block .item1 .number {
+            font-size: 60px;
+            color: #5aa0e2;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            border: 5px solid #5aa0e2;
+            float: left;
+            text-align: center;
+            margin: 0px 25px;
+        }
+
+        .content-item__2 .block .item2 {
+        }
+
+        .content-item__2 .block .item3 {
+        }
+
+.content-item__3 {
+    -ms-grid-column: 1/4;
+    grid-column: 1/4;
+    -ms-grid-row: 3/4;
+    grid-row: 3/4;
+    padding: 80px;
+    background-image: url(/media/tony-stoddard-454601-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    box-shadow: inset 0px 140px 40px -90px white;
+}
+
+    .content-item__3 .form {
+        padding: 30px;
+        border: 7px solid #5aa0e2;
+        color: #0083ff;
+        text-align: left;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 80px auto;
+        width: 480px;
+    }
+
+        .content-item__3 .form p {
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        .content-item__3 .form input {
+            border: 1px solid #5aa0e2;
+            background-color: #ffffff;
+            font-size: 30px;
+            padding: 7px;
+            color: #0083ff;
+            width: 100%;
+        }
+
+@media only screen and (max-width : 1920px) {
+    .content-item__1 .block {
+    }
+}
+
+.glow {
+    background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0) 20%, rgb(255,255,255) 90%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 20%, rgb(255,255,255) 90%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 20%, rgb(255,255,255) 90%);
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 300px;
+}
+
+@media only screen and (max-width : 1600px) {
+}
+
+@media only screen and (max-width : 1280px) {
+}
+
+@media only screen and (max-width : 1024px) {
+}
+
+@media only screen and (max-width : 320px) {
+}

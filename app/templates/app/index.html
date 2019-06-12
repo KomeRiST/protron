@@ -1,7 +1,85 @@
 {% extends "app/layout.html" %}
+{% load staticfiles %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/index.css' %}" />
 
-
+<div class="content-item__1">
+    <div class="block">
+        <h1>ООО<br />"ПРОТРОН"</h1>
+        <p>Более 15 лет в области разработки уникальных решений систем электропитания, силовой электроники и автоматики</p>
+        <a href="#">Реализованные проекты</a>
+    </div>
+</div>
+<div class="content-item__2">
+    <h2>Наша основная продукция</h2>
+    <div class="block">
+        <div class="item1">
+            <h3>Станции катодной защиты (СКЗ)</h3>
+            <hr />
+            <div class="content">
+                <div>
+                    <div class="number">1</div>
+                    <p>Круглосуточная работа в необслуживаемом режиме</p>
+                </div>
+                <div>
+                    <div class="number">2</div>
+                <p>Сохранение работоспособности при обрыве цепей защищаемого объекта.</p>
+                </div>
+                <div>
+                    <div class="number">3</div>
+                <p>Автоматическое восстановление рабочего режима после устранения обрыва.</p>
+                </div>
+                <div>
+                    <div class="number">4</div>
+                <p>Автоматический выход на рабочий режим после исчезновения и последующего возникновения напряжения в сети электропитания.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item2">
+            <h3>Источники питания</h3>
+            <hr />
+            <div class="content"></div>
+        </div>
+        <div class="item1">
+            <h3>Решения для электротранспорта</h3>
+            <hr />
+            <div class="content">
+                <div>
+                    <object class="img-90" type="image/svg+xml" data="/media/motor.svg"></object>
+                    <p>Источник питания электрического привода городского транспорта (БЛОК-А)</p>
+                </div>
+                <div>
+                    <object class="img-90" type="image/svg+xml" data="/media/turbo.svg"></object>
+                <p>Источник питания контейнера тягового привода вагонов метро (БЛОК-М)</p>
+                </div>
+                <div>
+                    <object class="img-90" type="image/svg+xml" data="/media/powerbank.svg"></object>
+                <p>Станция заряда городского электрического транспорта</p>
+                </div>
+                <div>
+                    <object class="img-90" type="image/svg+xml" data="/media/battery.svg"></object>
+                <p>Источник питания локомотивной электроники</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-item__3">
+    {#<div class="glow"></div>#}
+    <div class="form">
+        <h3>Оставить заявку</h3>
+        <p>Ваше имя:</p>
+        <input />
+        <p>Ваш телефон:</p>
+        <input />
+        <p>Комментарий:</p>
+        <input style="height: 200px;" />
+        <p>* - Поля обязательные для заполнения</p>
+        <button>Отправить</button>
+        <p>Отправляя форму, я даю согласие на обработку</p>
+        <a>персональных данных.</a>
+    </div>
+</div>
 
 {% endblock %}

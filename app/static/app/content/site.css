@@ -1,8 +1,33 @@
+html {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow-x: hidden;
+}
+h1, h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    color: #5aa0e2;
+    font-size: 48px;
+    text-align: center;
+    margin: 0 35px;
+    letter-spacing: 0.055em;
+    margin-right: CALC(35PX - 0.055em);
+}
+h1 {
+    font-size: 72px;
+    color: white;
+}
+h2 {
+    font-size: 60px;
+    margin: 80px 0;
+}
+hr {
+    height: 7px;
+    background-color: #5aa0e2;
+}
 header {
-    height: 75px;
+    height: 60px;
     border-bottom: solid 2px #5aa0e2;
     background-color: rgba(255,255,255,0.8);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /*display: grid;*/
     /*grid-gap: 20px;*/
     /*grid-template-columns: repeat(6, 1fr);*/
@@ -18,7 +43,7 @@ header {
     }
         header ul li {
             list-style: none;
-            font-size: 24px;
+            font-size: 18px;
             color: #5aa0e2;
             align-self: center;
         }
@@ -29,27 +54,31 @@ header {
         background-color: #5aa0e2;
         color: white;
         align-self: center;
-        line-height: 75px;
+        line-height: 60px;
     }
         header > ul > li:first-child p {
             margin: 0 35px;
-            /*letter-spacing: 0.2em;*/
+            letter-spacing: 0.2em;
             margin-right: CALC(35PX - 0.2em);
             font-size: 48px;
         }
+    header .descr {
+        text-align: left;
+        font-size: 18px;
+    }
     header .item {
         background-color: transparent;
         /*font-stretch: extra-expanded;*/
         /*text-align: center;*/
-        line-height: 75px;
+        line-height: 60px;
         cursor: pointer;
-        font-size: 36px;
+        font-size: 30px;
         letter-spacing: 0.05em;
         margin-right: -0.05em;
-        -moz-transition: all 0.5s ease 0.25s;
-        -o-transition: all 0.5s ease 0.25s;
-        -webkit-transition: all 0.5s ease 0.25s;
-        transition: all 0.5s ease 0.25s;
+        -moz-transition: all 0.1s ease 0.1s;
+        -o-transition: all 0.1s ease 0.1s;
+        -webkit-transition: all 0.1s ease 0.1s;
+        transition: all 0.1s ease 0.1s;
     }
     header .item:hover {
         background-color: #5aa0e2;
@@ -58,12 +87,14 @@ header {
     }
 
 footer {
-    height: 360px;
+    font-family: Century;
+    height: 200px;
     background-color: #333333;
     color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
+    box-shadow: 0px 0px 20px 30px #333;
 }
     footer content {
         grid-column: 2 / 3;
@@ -78,11 +109,58 @@ footer {
         footer content p:last-child {
             align-self: flex-end;
         }
+        footer content .fa {
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            border: 3px solid #66cccc;
+            padding: 3px 2px 2px 3px;
+            margin-right: 20px;
+        }
 
-body, html, ul {
-    padding: 0px;
-    margin: 0px;
+        body, html, ul {
+            padding: 0px;
+            margin: 0px;
+        }
+/*footer:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.6));
+}*/
+svg {
+    fill: #5aa0e2;
 }
+
+.img-16 {
+    width: 16px;
+    height: 16px;
+}
+.img-24 {
+    width: 24px;
+    height: 24px;
+}
+.img-32 {
+    width: 32px;
+    height: 32px;
+}
+.img-64 {
+    width: 64px;
+    height: 64px;
+}
+.img-90 {
+    width: 90px;
+    height: 90px;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -122,49 +200,85 @@ input[type="checkbox"].input-validation-error {
     -webkit-transition: width 0.5s linear 0.25s;
     transition: width 0.5s linear 0.25s;
     margin: 0 auto;
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);*/
 }
 
-@media only screen and (min-width : 321px) {
+/*@media only screen and (min-width : 321px) {
     .body-content {
         background-color: grey;
         width: 100%;
     }
-}
+}*/
 @media only screen and (max-width : 1920px) {
-    .body-content {
+    /*.body-content {
         max-width: 1600px;
         background-color: red;
         width: 80%;
-    }
+    }*/
 }
 @media only screen and (max-width : 1600px) {
-    .body-content {
+    /*.body-content {
         max-width: 1280px;
         background-color: yellow;
         width: 80%;
+    }*/
+    header .descr {
+        text-align: left;
+        font-size: 16px;
+    }
+    header .item {
+        font-size: 24px;
     }
 }
 @media only screen and (max-width : 1280px) {
-    .body-content {
+    /*.body-content {
         max-width: 1024px;
         background-color: green;
         width: 90%;
+    }*/
+    header .descr {
+        text-align: left;
+        font-size: 12px;
     }
+    header .item {
+        font-size: 18px;
+    }
+    header ul {
+        grid-gap: 5px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+        footer content {
+            grid-column: 2 / 4;
+            text-align: center;
+        }
 }
 @media only screen and (max-width : 1024px) {
-    .body-content {
+    /*.body-content {
         max-width: 800px;
         background-color: green;
         width: 90%;
+    }*/
+    header ul {
+        display: none;
     }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        footer content {
+            grid-column: 1 / 2;
+            text-align: center;
+        }
 }
 @media only screen and (max-width : 320px) {
-    .body-content {
+    /*.body-content {
         background-color: blue;
         width: 100%;
-    }
+    }*/
 }

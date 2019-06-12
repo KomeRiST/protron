@@ -25,7 +25,7 @@ SECRET_KEY = '97268c11-0d8f-4fe8-8c5f-d1cc1d85fb17'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','192.168.0.11']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -111,3 +111,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+# Media files (Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+MEDIA_URL = '/media/'
+MEDIA_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['app/media']))
