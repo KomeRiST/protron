@@ -161,6 +161,45 @@
 }
 
 @media only screen and (max-width : 1600px) {
+    .content-item__1 .block {
+        padding: 20px;
+    }
+        .content-item__1 .block > p {
+            font-size: 24px;
+        }
+        .content-item__1 .block a {
+            font-size: 18px;
+        }
+    .content-item__2 {
+        box-shadow: 0px 0px 40px 100px white;
+    }
+        .content-item__2 .block .item1 p {
+            font-size: 18px;
+        }
+        .content-item__2 .block .item1 .content object {
+            float: left;
+            margin: 0px 30px;
+            margin: 0px 20px;
+        }
+        .content-item__2 .block .item1 .number {
+            font-size: 30px;
+            height: 40px;
+            width: 40px;
+            margin: 0px 5px;
+        }
+    .content-item__3 .form {
+        padding: 10px;
+        margin: 0px auto;
+        width: 300px;
+    }
+        .content-item__3 .form p {
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .content-item__3 .form input {
+            font-size: 18px;
+            padding: 3px;
+        }
 }
 
 @media only screen and (max-width : 1280px) {

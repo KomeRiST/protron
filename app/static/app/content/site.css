@@ -225,6 +225,21 @@ input[type="checkbox"].input-validation-error {
         background-color: yellow;
         width: 80%;
     }*/
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 48px;
+        margin: 50px 0;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    img-90 {
+        width: 48px;
+        height: 48px;
+    }
+
     header .descr {
         text-align: left;
         font-size: 16px;
