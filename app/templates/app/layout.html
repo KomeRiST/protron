@@ -6,20 +6,20 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
 <body>
     <header>
         <ul>
-            <li><p>Протрон</p></li>
+            <li><p><a href="/">Протрон</a></p></li>
             <li class="descr">Разработка и производство<br />силовой электроники</li>
             <li class="item">Продукция</li>
             <li class="item">Контакты</li>
             <li class="item">Наши проекты</li>
             <li class="item">О нас</li>
         </ul>
+        <div class="topline">{{ message }}</div>
     </header>
     <div class="body-content">
 {% block content %}{% endblock %}
@@ -28,17 +28,20 @@
             <content>
                 <!--<a class="header__link" href="mailto:info@archi.ru">
                     <a class="header__link" href="http://protron.ru/kontakty/">-->
-                <p style="font-size: 28px;">г. Москва ул. Барклая д. 6 стр.5</p>
-                <p style="font-size: 24px; color: #66cccc;"><i class="fa fa-phone img-24" aria-hidden="true"></i>+7(499)-550-30-25</p>
-                <p style="font-size: 18px; color: #999999;">Разработка и производство силовой электроники<br />© 2019 ПРОТРОН</p>
-                <p style="font-size: 12px; color: black;">Develop KomeR</p>
+                <p class="adress">г. Москва ул. Барклая д. 6 стр.5</p>
+                <p class="phone"><i class="fa fa-phone img-24" aria-hidden="true"></i>+7(499)-550-30-25</p>
+                <p class="company">Разработка и производство силовой электроники<br />© 2019 ПРОТРОН</p>
+                <p class="dev">Develop KomeR</p>
             </content>
         </footer>
-
+<!--    
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
-    <script src="{% static 'app/scripts/respond.js' %}"></script>
-{% block scripts %}{% endblock %}
+    <script src="{% static 'app/scripts/respond.js' %}"></script>-->
+{% block scripts %}
+    {% endblock %}
 
 </body>
 </html>

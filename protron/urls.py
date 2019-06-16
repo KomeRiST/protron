@@ -12,7 +12,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('complicted/', views.complicted, name='complicted'),
     path('contact/', views.contact, name='contact'),
+    path('product/<int:index>/', views.product, name='product'),
     path('about/', views.about, name='about'),
     path('login/',
          LoginView.as_view

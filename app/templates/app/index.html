@@ -2,63 +2,76 @@
 {% load staticfiles %}
 
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'app/content/index.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'app/slick/slick.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'app/slick/slick-theme.css' %}" />
 
 <div class="content-item__1">
     <div class="block">
         <h1>ООО<br />"ПРОТРОН"</h1>
         <p>Более 15 лет в области разработки уникальных решений систем электропитания, силовой электроники и автоматики</p>
-        <a href="#">Реализованные проекты</a>
+        <a class="btn_style" href="/complicted">Реализованные проекты</a>
     </div>
 </div>
 <div class="content-item__2">
     <h2>Наша основная продукция</h2>
-    <div class="block">
+    <div class="block slider">
         <div class="item1">
             <h3>Станции катодной защиты (СКЗ)</h3>
-            <hr />
             <div class="content">
-                <div>
+                <div class="number_item">
                     <div class="number">1</div>
                     <p>Круглосуточная работа в необслуживаемом режиме</p>
                 </div>
-                <div>
+                <div class="number_item">
                     <div class="number">2</div>
-                <p>Сохранение работоспособности при обрыве цепей защищаемого объекта.</p>
+                    <p>Сохранение работоспособности при обрыве цепей защищаемого объекта.</p>
                 </div>
-                <div>
+                <div class="number_item">
                     <div class="number">3</div>
-                <p>Автоматическое восстановление рабочего режима после устранения обрыва.</p>
+                    <p>Автоматическое восстановление рабочего режима после устранения обрыва.</p>
                 </div>
-                <div>
+                <div class="number_item">
                     <div class="number">4</div>
-                <p>Автоматический выход на рабочий режим после исчезновения и последующего возникновения напряжения в сети электропитания.</p>
+                    <p>Автоматический выход на рабочий режим после исчезновения и последующего возникновения напряжения в сети электропитания.</p>
+                </div>
+                <div style="align-self: center; justify-self: center;">
+                    <a class="btn_style" href="/product/1">Подробнее</a>
                 </div>
             </div>
         </div>
         <div class="item2">
             <h3>Источники питания</h3>
-            <hr />
-            <div class="content"></div>
+            <div class="content">
+                <div class="item">
+                    <p>Регулируемые источники питания</p>
+                </div>
+                <div class="item">
+                    <p>Для монтажа в 19" стойку</p>
+                </div>
+                <div class="item">
+                    <p>Для монтажа на DIN-рейку</p>
+                </div>
+            </div>
         </div>
         <div class="item1">
             <h3>Решения для электротранспорта</h3>
-            <hr />
             <div class="content">
-                <div>
-                    <object class="img-90" type="image/svg+xml" data="/media/motor.svg"></object>
+                <div class="number_item">
+                    <div class="number"><object type="image/svg+xml" data="/media/motor.svg"></object></div>
                     <p>Источник питания электрического привода городского транспорта (БЛОК-А)</p>
                 </div>
-                <div>
-                    <object class="img-90" type="image/svg+xml" data="/media/turbo.svg"></object>
+                <div class="number_item">
+                    <div class="number"><object class="img-90" type="image/svg+xml" data="/media/turbo.svg"></object></div>
                 <p>Источник питания контейнера тягового привода вагонов метро (БЛОК-М)</p>
                 </div>
-                <div>
-                    <object class="img-90" type="image/svg+xml" data="/media/powerbank.svg"></object>
+                <div class="number_item">
+                    <div class="number"><object class="img-90" type="image/svg+xml" data="/media/powerbank.svg"></object></div>
                 <p>Станция заряда городского электрического транспорта</p>
                 </div>
-                <div>
-                    <object class="img-90" type="image/svg+xml" data="/media/battery.svg"></object>
+                <div class="number_item">
+                    <div class="number"><object class="img-90" type="image/svg+xml" data="/media/battery.svg"></object></div>
                 <p>Источник питания локомотивной электроники</p>
                 </div>
             </div>
@@ -81,5 +94,44 @@
         <a>персональных данных.</a>
     </div>
 </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{% static '/app/slick/slick.min.js' %}"></script>
+<script type="text/javascript">
+    function Slider() {
+        var settings = {
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '0px',
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            fade: false,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1
+                    }
+                }
+            ] 
+        }
+            $('.slider').slick(settings);
+    };
+    $(document).ready(function () {
+        Slider();
+    });
+</script>
 
 {% endblock %}

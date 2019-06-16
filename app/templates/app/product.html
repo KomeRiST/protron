@@ -1,0 +1,12 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/product.css' %}" />
+
+<div class="content">
+    {% include content %}
+</div>
+
+{% endblock %}

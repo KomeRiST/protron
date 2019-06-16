@@ -1,0 +1,113 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/complicted.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/slick/slick-theme.css' %}" />
+
+<div class="content slider">
+    <div>
+        <div class="number_item">
+            <div class="number">1</div>
+            <p>Зарядные устройства для АКБ ж.д. вагонов мощностью 10-15 кВт. <span>По заказу Молдавской ж.д.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">2</div>
+            <p>Станции катодной защиты газовых и нефтепроводов мощностью 0.6 - 5 кВт. <span>Станции поставлялись в Молдову, Украину, Казахстан, Швецию.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">3</div>
+            <p>Программируемый импульсный источник питания мощностью 50 кВт для модернизации станка ЭХЛ-100 предназначенного для размерной электрохимической обработки лопаток компрессоров газотурбинных авиационных и корабельных двигателей. <span>Работа выполнялась по заказу НПО «Сатурн» г. Рыбинск.</span></p>
+        </div>
+    </div>
+    <div>
+        <div class="number_item">
+            <div class="number">4</div>
+            <p>Программируемый импульсный источник питания мощностью 25 кВт для микродуговой обработки (МДО) поверхности металлов вентильной группы (алюминий, титан, цирконий и.т.д.). <span>Работа выполнена по заказу института твердых сплавов г. Москва.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">5</div>
+            <p>Источники мощностью 15 и 30 кВт для исследований процессов МДО. <span>По Договору с Госуниверситетом г. Стамбул, Турция.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">6</div>
+            <p>Автоматизированная установка для исследования процессов МДО. <span>По заказу Госуниверситета г. Стамбул, Турция.</span></p>
+        </div>
+    </div>
+    <div>
+        <div class="number_item">
+            <div class="number">7</div>
+            <p>Источники мощностью 15 и 30 кВт для исследований процессов МДО. <span>По Договору с Госуниверситетом г. Стамбул, Турция.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">8</div>
+            <p>Автоматизированная установка для исследования процессов МДО. <span>По заказу Госуниверситета г. Стамбул, Турция.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">9</div>
+            <p>Установка ТВЧ нагрева мощностью 5 кВт, для ВЧ (550-800 кГц) нагрева твердых сплавов. В количестве 20 штук. <span>По заказу Российской компании.</span></p>
+        </div>
+    </div>
+    <div>
+        <div class="number_item">
+            <div class="number">10</div>
+            <p>Генератор ТВЧ (440 кГц) мощностью 1.5 кВт для литья микропровода в количестве 100 штук. <span>По заказу Российской компании.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">11</div>
+            <p>Преобразователь катодной защиты для защиты ж.д. мостов. <span>Разработан в результате сотрудничества со шведской компанией для скандинавского рынка.</span></p>
+        </div>
+        <div class="number_item">
+            <div class="number">12</div>
+            <p>Мощные зарядные устройства для заряда АКБ электрогрузовика мощностью 10 кВт и электробуса мощностью 200 кВт (8 х 25 кВт) <span>в сотрудничестве со шведской компанией.</span></p>
+        </div>
+    </div>
+</div>{% block scripts %}
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="{% static '/app/slick/slick.min.js' %}"></script>
+<script type="text/javascript">
+    function Slider() {
+        var settings = {
+            autoplay: true,
+            autoplaySpeed: 7000,
+            slidesToShow: 4,
+            centerMode: true,
+            centerPadding: '0px',
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            fade: false,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1
+                    }
+                }
+            ] 
+        }
+            $('.slider').slick(settings);
+    };
+    $(document).ready(function () {
+        Slider();
+    });
+</script>
+    {% endblock %}
+    
+{% endblock %}

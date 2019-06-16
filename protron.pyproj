@@ -4,7 +4,9 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>protron</Name>
     <RootNamespace>protron</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.7-32</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <CommandLineArguments>runserver 0.0.0.0:8888</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -17,7 +19,7 @@
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
-    <LaunchProvider>Django launcher</LaunchProvider>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
     <DjangoSettingsModule>protron.settings</DjangoSettingsModule>
     <OutputPath>.</OutputPath>
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
@@ -50,11 +52,15 @@
     <Folder Include="app\static\" />
     <Folder Include="app\static\app\" />
     <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\content\products\" />
     <Folder Include="app\static\app\fonts\" />
     <Folder Include="app\static\app\ico\" />
     <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\static\app\slick\" />
+    <Folder Include="app\static\app\slick\fonts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="app\templates\app\products\" />
     <Folder Include="protron\" />
   </ItemGroup>
   <ItemGroup>
@@ -67,9 +73,35 @@
     <Content Include="app\media\powerbank.svg" />
     <Content Include="app\media\RegIstPit.jpg" />
     <Content Include="app\media\skz.png" />
+    <Content Include="app\media\skz2.png" />
     <Content Include="app\media\tony-stoddard-454601-unsplash.jpg" />
+    <Content Include="app\static\app\content\complicted.css" />
     <Content Include="app\static\app\content\index.css" />
+    <Content Include="app\static\app\content\product.css" />
+    <Content Include="app\static\app\content\products\rip.css" />
+    <Content Include="app\static\app\content\products\skz.css" />
     <Content Include="app\static\app\ico\phone.svg" />
+    <Content Include="app\static\app\slick\ajax-loader.gif" />
+    <Content Include="app\static\app\slick\config.rb" />
+    <Content Include="app\static\app\slick\fonts\slick.eot" />
+    <Content Include="app\static\app\slick\fonts\slick.svg" />
+    <Content Include="app\static\app\slick\fonts\slick.ttf" />
+    <Content Include="app\static\app\slick\fonts\slick.woff" />
+    <Content Include="app\static\app\slick\slick-theme.css" />
+    <Content Include="app\static\app\slick\slick-theme.less" />
+    <Content Include="app\static\app\slick\slick-theme.scss" />
+    <Content Include="app\static\app\slick\slick.css" />
+    <Content Include="app\static\app\slick\slick.js" />
+    <Content Include="app\static\app\slick\slick.less" />
+    <Content Include="app\static\app\slick\slick.min.js" />
+    <Content Include="app\static\app\slick\slick.scss" />
+    <Content Include="app\templates\app\complicted.html" />
+    <Content Include="app\templates\app\product.html" />
+    <Content Include="app\templates\app\products\19.html" />
+    <Content Include="app\templates\app\products\din.html" />
+    <Content Include="app\templates\app\products\rip.html" />
+    <Content Include="app\templates\app\products\skz.html" />
+    <Content Include="app\templates\app\products\transport.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
@@ -107,6 +139,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
     <InterpreterReference Include="Global|PythonCore|3.7-32" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />

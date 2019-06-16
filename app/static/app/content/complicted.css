@@ -1,0 +1,29 @@
+.content {
+    padding: 7px;
+    /*max-width: 800px;*/
+    width: 100%;
+    color: black;
+    margin: 120px auto;
+    display: grid;
+    grid-gap: 20px;
+}
+span {
+    color: navy;
+}
+p {
+    color: #333333;
+}
+
+@media only screen and (max-width : 1920px) {
+}
+@media only screen and (max-width : 1600px) {
+}
+@media only screen and (max-width : 1280px) {
+}
+@media only screen and (max-width : 1024px) {
+    .content{
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width : 460px) {
+}
