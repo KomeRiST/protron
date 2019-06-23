@@ -1,0 +1,9 @@
+.content p, .content ul li {
+    text-indent: 50px;
+    text-align: justify;
+    list-style: none;
+    padding: 0.5em;
+}
+.content ul li {
+    padding: 0;
+}

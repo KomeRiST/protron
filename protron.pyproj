@@ -75,7 +75,9 @@
     <Content Include="app\media\skz.png" />
     <Content Include="app\media\skz2.png" />
     <Content Include="app\media\tony-stoddard-454601-unsplash.jpg" />
+    <Content Include="app\static\app\content\about.css" />
     <Content Include="app\static\app\content\complicted.css" />
+    <Content Include="app\static\app\content\contact.css" />
     <Content Include="app\static\app\content\index.css" />
     <Content Include="app\static\app\content\product.css" />
     <Content Include="app\static\app\content\products\rip.css" />
@@ -102,6 +104,7 @@
     <Content Include="app\templates\app\products\rip.html" />
     <Content Include="app\templates\app\products\skz.html" />
     <Content Include="app\templates\app\products\transport.html" />
+    <None Include="CustomProfile.pubxml" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

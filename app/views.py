@@ -31,23 +31,29 @@ def product(request, index):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     if (index == 1):
-        title = "Регулируемые источники питания";
-        message = title;
-        content = "app/products/rip.html";
-        image1 = "RegIstPit.jpg";
-        image2 = "";
+        title = "Регулируемые источники питания"
+        message = title
+        content = "app/products/rip.html"
+        image1 = "RegIstPit.jpg"
+        image2 = ""
     if (index == 2):
-        title = "СКЗ Протрон";
-        message = title;
-        content = "app/products/skz.html";
-        image1 = "skz.png";
-        image2 = "skz2.png";
+        title = "СКЗ Протрон"
+        message = title
+        content = "app/products/skz.html"
+        image1 = "skz.png"
+        image2 = "skz2.png"
     if (index == 3):
-        title = "Для монтажа в 19\" стойку";
-        message = title;
-        content = "app/products/19.html";
-        image1 = "19.png";
-        image2 = "";
+        title = "Для монтажа в 19\" стойку"
+        message = title
+        content = "app/products/19.html"
+        image1 = "19.png"
+        image2 = ""
+    if (index == 4):
+        title = "Для монтажа на DIN-рейку"
+        message = title
+        content = "app/products/din.html"
+        image1 = "din.png"
+        image2 = ""
     return render(request,
         'app/product.html',
         {

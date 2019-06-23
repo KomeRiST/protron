@@ -3,24 +3,95 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="description" CONTENT="Разработаем уникальные решения систем электропитания, силовой электроники и автоматики в короткие сроки.">
+    <META NAME="keywords" CONTENT="транспорт, источник вторичного электропитания, силовая аппаратура, станция катодной защиты">
+
+    <META NAME="AUTHOR" CONTENT="Komerist Y. S.">
+
     <title>{{ title }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     {% load staticfiles %}
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <body>
+    <style>
+    #p_prldr {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    /* left: 0; */
+    top: 0;
+    /* right: 0; */
+    bottom: 0;
+    background: white;
+    z-index: 1001;
+    }
+
+    .contpre small {
+        font-size: 25px;
+    }
+
+    .contpre {
+        /* width: 250px; */
+        /* height: 100px; */
+        /* position: absolute; */
+        /* left: 50%; */
+        /* top: 48%; */
+        /* margin-left: -125px; */
+        /* margin-top: -75px; */
+        color: #5aa0e2;
+        font-size: 40px;
+        text-align: center;
+        /* line-height: 35px; */
+    }
+
+    #p_prldr .svg_anm {
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        background: url(images/oval.svg) center center no-repeat;
+        fill: #5aa0e2;
+        background-size: 41px;
+        margin: -16px 0 0 -16px;
+    }
+
+  </style>
     <header>
         <ul>
             <li><p><a href="/">Протрон</a></p></li>
             <li class="descr">Разработка и производство<br />силовой электроники</li>
-            <li class="item">Продукция</li>
-            <li class="item">Контакты</li>
-            <li class="item">Наши проекты</li>
-            <li class="item">О нас</li>
+            <li class="item"><a href="/product/">Продукция</a></li>
+            <li class="item"><a href="/contact/">Контакты</a></li>
+            <li class="item"><a href="/complicted/">Проекты</a></li>
+            <li class="item"><a href="/about/">О нас</a></li>
         </ul>
-        <div class="topline">{{ message }}</div>
+        <div id="mob_menu">
+				<input type="checkbox"><div id="menu">
+                    <!--<p style="margin: 5px; color: white;">Menu</p>-->
+                </div>
+				<div id="line-one"></div><div id="line-two"></div><div id="icon-one">
+            <a href="/">Главная</a>
+				</div>
+				<div id="icon-two">
+            <a href="/product">Проекты</a>
+				</div>
+				<div id="icon-three">
+            <a href="/contact">Контакты</a>
+				</div>
+				<div id="icon-foure">
+            <a href="/about">О нас</a>
+				</div>
+			</div>
+        {% if message != None %}
+            <div class="topline">{{ message }}</div>
+        {% endif %}
     </header>
+    <div id="p_prldr"><div class="contpre">Подождите<br><small>идет загрузка</small></div></div>
     <div class="body-content">
 {% block content %}{% endblock %}
     </div>
@@ -42,6 +113,11 @@
     <script src="{% static 'app/scripts/respond.js' %}"></script>-->
 {% block scripts %}
     {% endblock %}
-
+    <script type="text/javascript">$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $svg_anm   = $preloader.find('.svg_anm');
+    $svg_anm.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+});</script>
 </body>
 </html>

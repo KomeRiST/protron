@@ -6,13 +6,6 @@
     grid-template-rows: repeat(3, auto);
 }*/
 
-.slider {
-    -moz-transition: none;
-    -o-transition: none;
-    -webkit-transition: none;
-    transition: none;
-}
-
 .content-item__1 {
     height: 100vh;
     min-height: 800px;

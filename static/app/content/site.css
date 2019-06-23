@@ -231,13 +231,9 @@ header {
 
     header .item {
         background-color: transparent;
-        /* border-top: 15px solid; */
-        /* border-bottom: 15px solid; */
-        justify-self: stretch;
-        align-self: stretch;
         /*font-stretch: extra-expanded;*/
         /*text-align: center;*/
-        line-height: 60px;
+        /*line-height: 60px;*/
         cursor: pointer;
         font-size: 1.85rem;
         letter-spacing: 0.05em;
@@ -251,8 +247,6 @@ header {
         header .item:hover {
             background-color: #5aa0e2;
             color: white;
-            /* border-top: 15px solid #5aa0e2; */
-            /* border-bottom: 15px solid #5aa0e2; */
             /*font-stretch: extra-expanded;*/
         }
 
@@ -335,19 +329,12 @@ svg {
     height: 90px;
 }
 
-header .item:hover a {
-    color: white;
-}
-
 a, a:hover, a:active {
     text-decoration: none;
-    color: #5aa0e2;
-    /*width: 100%;
-    height: 100%;*/
-    display: block;
-    /* padding: 7px; */
-    /* margin: .5em; */
+    color: black;
+    margin: .5em;
 }
+
 
 .number_item {
     color: #6699cc;
@@ -377,7 +364,7 @@ a, a:hover, a:active {
         color: #164b7e;
         margin: 0px;
         /* background-color: #5aa0e2; */
-        padding: 0.44em 0.44em 0.44em 0em;
+        padding: 0.44em 0.44em 0.44em 1em;
         /*font-size: 24px;*/
         border-radius: 10px 10px 10px 50px;
         /* border-bottom: 3px solid #5aa0e2; */
@@ -489,12 +476,12 @@ input[type="checkbox"].input-validation-error {
         background-color: red;
         width: 80%;
     }*/
-    p, li {
-        font-size: 1.25rem;
+    p {
+        font-size: 1.5rem;
     }
 
     .number_item .number {
-        font-size: 2.5rem;
+        font-size: 3rem;
         height: 1.5em;
         width: 1.5em;
         /* padding: .1em; */
@@ -546,9 +533,9 @@ input[type="checkbox"].input-validation-error {
     }
 
     .number_item .number {
-        font-size: 2rem;
-        height: 1.4em;
-        width: 1.4em;
+        font-size: 2.5rem;
+        height: 1.44em;
+        width: 1.44em;
     }
 
     .topline {
@@ -564,7 +551,6 @@ input[type="checkbox"].input-validation-error {
     .topline {
         font-size: 2rem;
     }
-
     footer {
         grid-template-columns: 1fr 2fr 1fr;
     }
@@ -607,13 +593,9 @@ input[type="checkbox"].input-validation-error {
         }
 
     .number_item .number {
-        font-size: 2rem;
-        height: 1.25em;
-        width: 1.25em;
-    }
-
-    .number_item p {
-        padding: 0.44em 0.44em 0.44em 0em;
+        font-size: 2.25rem;
+        height: 1.5em;
+        width: 1.5em;
     }
 
     .topline {
@@ -685,10 +667,6 @@ input[type="checkbox"].input-validation-error {
             width: 1.75em;
         }
 
-        .number_item p {
-            padding: 0.44em 0.44em 0.44em .5em;
-        }
-
     .topline {
         font-size: 1.5rem;
     }
@@ -707,8 +685,8 @@ input[type=checkbox] {
     height: 2rem;
     opacity: 0;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 1.5rem;
+    top: .5rem;
     width: 5rem;
     z-index: 504;
 }
@@ -720,8 +698,8 @@ input[type=checkbox] {
     height: 2rem;
     padding: 0.1rem;
     position: fixed;
-    right: .1rem;
-    top: .1rem;
+    right: 2rem;
+    top: .5rem;
     transition: .3s;
     width: 2rem;
     z-index: 100;
@@ -732,15 +710,15 @@ input[type=checkbox] {
     background: rgba(255, 255, 255, 0.3);
     height: .2rem;
     position: fixed;
-    right: 0.8rem;
-    top: 1rem;
+    right: 2.6rem;
+    top: 1.35rem;
     transition: .3s;
     width: 1rem;
     z-index: 101;
 }
 
 #line-two {
-    top: 1.5rem;
+    top: 1.8rem;
 }
 
 #icon-one, #icon-two, #icon-three, #icon-foure {
@@ -751,8 +729,8 @@ input[type=checkbox] {
     border-radius: 1rem;
     height: 1.25rem;
     position: fixed;
-    right: 1.15rem;
-    top: .5rem;
+    right: 2.15rem;
+    top: 1rem;
     transition: .3s;
     transition-delay: .2s;
     width: 1.5rem;
@@ -761,8 +739,6 @@ input[type=checkbox] {
 
 div[id^="icon-"] a {
     margin: 0px;
-    line-height: 1.2rem;
-    /* padding: 0; */
     font-size: 14px;
     display: none;
     opacity: 0;
@@ -847,13 +823,13 @@ input[type=checkbox]:checked ~ #icon-foure {
 
 input[type=checkbox]:checked ~ #line-one {
     background: #FFFFFF;
-    top: 1.25rem;
+    top: 1.6rem;
     transform: rotate(-45deg);
 }
 
 input[type=checkbox]:checked ~ #line-two {
     background: #FFFFFF;
-    top: 1.25rem;
+    top: 1.6rem;
     transform: rotate(45deg);
 }
 

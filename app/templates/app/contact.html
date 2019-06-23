@@ -1,20 +1,47 @@
 {% extends "app/layout.html" %}
-
+{% load staticfiles %}
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/contact.css' %}" />
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<div class="content">
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+    <div class="tabs">
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1" title="Офис компании">Офис в Москве</label>
+ 
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2" title="Производство">Производство г. Екатеринбург</label>
+ 
+    <section id="content-tab1">
+        <h3>Офис</h3>
+        <address>
+            <div class="adress">121087, Москва, Барклая улица, дом 6, строение 5</div>
+            <p class="phone"><i class="fa fa-phone img-24" aria-hidden="true"></i>+7(499)-550-30-25</p>
+            <a href="mailto:info@protron.ru">email: info@protron.ru</a>
+            <a href="/">www.protron.ru</a>
+        </address>
+        <div id="geomap_map" style="width:100%; min-height:500px"></div>
+    </section>  
+    <section id="content-tab2">
+        <h3>Производство</h3>
+        <address>
+            <div class="adress">г. Екатеринбург</div>
+            <p class="phone"><i class="fa fa-phone img-24" aria-hidden="true"></i>+7(963) 046-50-62</p>
+            <a href="mailto:info@protron.ru">email: info@protron.ru</a>
+            <a href="/">www.protron.ru</a>
+        </address>
+    </section> 
+</div>
+</div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
-
+<script type="text/javascript">
+	ymaps.ready(function(){
+		var map = new ymaps.Map("geomap_map", {
+				center: [55.73925, 37.508229],
+				zoom: 13
+			});
+			map.geoObjects.add(new ymaps.Placemark([55.73925, 37.508229],{}));
+	});
+</script>
 {% endblock %}
