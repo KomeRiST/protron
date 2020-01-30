@@ -92,13 +92,14 @@
         <p>Комментарий:</p>
         <input style="height: 200px;" />
         <p style="text-align: right;font-size: 1rem;">* - Поля обязательные для заполнения</p>
-        <button>Отправить</button>
-        <p style="font-size: 1rem;">Отправляя форму, я даю согласие на обработку <a>персональных данных.</a></p>
+        <button class="btn_style_small">Отправить</button>
+        <p style="font-size: 1rem; text-align: center;">Отправляя форму, я даю согласие на обработку <a>персональных данных.</a></p>
     </div>
 </div>
 
   <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+
     <script src="{% static '/app/slick/slick.min.js' %}"></script>
 <script type="text/javascript">
     function Slider() {
@@ -108,7 +109,7 @@
             slidesToShow: 3,
             centerMode: true,
             centerPadding: '0px',
-            arrows: true,
+            arrows: false,
             dots: false,
             infinite: true,
             speed: 300,

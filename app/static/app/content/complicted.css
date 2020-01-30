@@ -1,28 +1,93 @@
 .content {
     padding: 7px;
-    /*max-width: 800px;*/
+    max-width: 800px;
+    margin: 30px auto;
     width: 100%;
     color: black;
     display: grid;
     grid-gap: 20px;
 }
+
+.head {
+    min-width: 170px;
+    padding: .5em;
+}
+
+    .head p {
+        display: inline-block;
+    }
+
+.item p:first-child {
+}
+
+.item p:last-child {
+}
+
+.content .item {
+    display: grid;
+    padding: 7px;
+    padding-bottom: 0;
+    grid-gap: 10px;
+    /* box-shadow: 4px 4px 8px -8px black; */
+    /* border-top: 1px solid #5aa0e2; */
+    border-bottom: 1px solid #5aa0e2;
+}
+
+.client, .project {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.text {
+    padding: .5em;
+    /* color: #5aa0e2; */
+}
+
+.client {
+    font-style: italic;
+    font-size: smaller;
+    text-align: right;
+    border-top: 1px solid #5aa0e2;
+    /* border-bottom: 1px solid #5aa0e2; */
+    /* background-color: #5aa0e2; */
+    color: #5aa0e2;
+    display: inline-block;
+    /* border-radius: 10px; */
+    justify-self: end;
+    padding: 5px;
+    /* box-shadow: 6px 5px 10px -8px #5aa0e2; */
+}
+
+p.client {
+}
+
+p.client {
+}
+
+.project {
+    text-indent: 50px;
+}
+
 /*span {
     color: navy;
 }
 p {
     color: white;
 }*/
-
 @media only screen and (max-width : 1920px) {
 }
+
 @media only screen and (max-width : 1600px) {
 }
+
 @media only screen and (max-width : 1280px) {
 }
+
 @media only screen and (max-width : 1024px) {
-    .content{
+    .content {
         margin-top: 50px;
     }
 }
+
 @media only screen and (max-width : 460px) {
 }
